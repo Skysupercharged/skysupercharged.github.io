@@ -1,0 +1,13 @@
+body {
+  background-color: darkblue;
+}
+h1 {
+  color: aqua;
+}
+pre {
+  color: aqua;
+  display: block;
+  font-family: arial;
+  white-space: pre;
+  margin: 1em 0;
+}
