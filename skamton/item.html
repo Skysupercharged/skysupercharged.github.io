@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S2Fybm9mZmVsIGNhbiBzZWUgeW91Lg==</title>
+<link rel="icon" href="disk.png">
+<link rel="stylesheet" href="skam.css">
+</head>
+
+<body>
+<div class="OLD_DATA">
+<center>
+<a href="secret/OLD_DATA.blocked">
+<img src="secret/OLD_DATA.png" alt="S2Fybm9mZmVsIGNhbiBzZWUgeW91Lg==">
+</a>
+</center>
+</div>
+<h1>you find something in your pocket that wasn't there before</h1>
+<div id="sound">
+<audio id="audio" src="secret/karnoffel.mp3" autoplay loop>
+</audio>
+</div>
+</body>
+<script>
+var sound = document.querySelector('audio');
+var promise = sound.play();
+if (promise !== undefined) {
+  promise.then(_ => {
+    // Autoplay started!
+  }).catch(error => {
+let autoplayfailed;
+   autoplayfailed = "<audio id='audio' src='secret/karnoffel.mp3' controls autoplay loop> </audio> <img src='secret/autoplayfailed.png'>";
+document.getElementById("sound").innerHTML = autoplayfailed;
+  });
+}
+</script>
+<script>
+audio.volume = 0.05;
+</script>
+</html>

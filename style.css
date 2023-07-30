@@ -1,5 +1,7 @@
-body {background-color: darkblue;}
-h1 {color: aqua; text-align:center;}
-pre {color: aqua; display: block; font-family: arial; white-space: pre; margin: 1em 0; text-align:center;}
-button {text-align:center; margin: 10px 5px; color: #00ffff; background-color: #596e21;
-    border: solid #f1cc36 2.5px;}
+body {background-color: #000064;}
+h1 {color: #00ffff; text-align:center;}
+pre {color: #00ffff; display: block; font-family: arial; white-space: pre; margin: 1em 0; text-align:center;}
+button {text-align:center; margin: 10px 5px; color: #00ffff; background-color: #596e21; border: solid #f1cc36 2.5px; cursor: pointer; box-shadow: 0 3px #f1cc36}
+button:active {box-shadow: 0 1px #f1cc36; transform: translateY(2px);}
+a {color: #00ffff; display: block; font-family: arial; white-space: pre; margin: 1em 0; text-align:center;}
+.selfb {text-align:center; margin: 10px 5px; color: #ffffff; background-color: #000000; border: solid #ffffff 2.5px; cursor: pointer; box-shadow: 0 3px #ffffff}
