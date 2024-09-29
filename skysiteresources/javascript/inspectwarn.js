@@ -1,0 +1,1 @@
+console.log("%cTread carefully, lest you spoil this site's secrets. Heed not my warning, and there will be nobody but you to blame.", "font-size:2.5rem;color:#FF0000;");

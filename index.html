@@ -4,65 +4,96 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Skysupercharged Website</title>
-<link rel="icon" href="skyvicon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" href="/skysiteresources/skyvicon.png">
+<link rel="stylesheet" href="/skysiteresources/style.css">
+<style>
+    .associated {
+        cursor: pointer;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        vertical-align: middle;
+    }
+    #sitebuttonI{transform: translateY(1px);}
+
+    .selfb {width:70px; height:70px; text-align:center; margin: 10px 5px; color: #ffffff; background-color: #000000; border: solid #ffffff 2.5px; cursor: pointer; box-shadow: 0 3px #ffffff}
+
+    .selfb > img {width:50px; height:50px; transform: translateY(1px)}
+
+    .stella {
+        background-color:black;
+        background-image: url('https://stellaring.network/static/assets/purple-stars-bg.gif');
+        border-color: #0064af;
+        border-radius: 10px 10px 100px 100px;
+        width: 350px;
+        height: 40px;
+        /*box-shadow: 0px 5px 10px 0px black;*/
+        line-height: 30px;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .stella > button {
+        width:25px;
+        height:20px;
+        color: #ffffff;
+        background-color: #320a64;
+        border: solid #ffffff 2.5px;
+        cursor: pointer;
+        box-shadow: 0 3px #ffffff;
+    }
+    .stella > button:active {
+        box-shadow: 0 1px #ffffff;
+        transform: translateY(2px);
+    }
+</style>
 </head>
 
 <body>
 <h1>Skysupercharged Website</h1>
-<pre>howdy hey, internet stranger.</pre>
-<br>
-<br>
-<br>
-<center>
-<button onclick="skylanders()">skylanders</button>
-<button onclick="document.location='changelog'">changelog</button>
+<pre id="greetings"><span style="color:#FF0000;"> <noscript>Please enable Javascript. This site will not work without it.</noscript> </span></pre>
+<center style="background-color:#0064af;">
+<!--
+<button tabindex=-1 style="opacity:0%; pointer-events:none; width:80px;" onclick="document.location='404'">404</button>
+-->
+<button style="width:85px;" onclick="document.location='changelog'">Changelog</button>
+<span class="associated" style="user-select:none; color:#FFFFFF;" onclick="associatedleft()"><</span>
+<a id="sitebuttonA" class="associated" style="user-select:none;"><img id="sitebuttonI" width="81" height="31"></img></a>
+<span class="associated" style="user-select:none; color:#FFFFFF;" onclick="associatedright()">></span>
+<button style="width:85px;" onclick="skylanders()">Skylanders</button>
 </center>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<center class="stella">
+<button onclick="document.location='https://stellaring.network/previous/'"><</button>
+<a style="color:white;" href="https://stellaring.network/">this site is part of <b>stellaring</b></a>
+<button onclick="document.location='https://stellaring.network/next/'">></button>
+</center>
+<pre id="f">this site is made in opera gx on a 1920x1080 monitor. compatiblity with other browsers and resolutions is not guaranteed,
+and especially mobile users will have a flawed experience. javascript is also necessary for a lot of the site to function.
+
+click the buttons above to get started! the associated sites button will take you to sites of friends and a web ring i'm part of,
+the changelog button will take you to the site's changelog, and the Skylanders button will Skylanders
+remember<span id="secrets">, keep your eyes peeled for <span style="user-select:none;cursor:pointer;" onclick="secret()">secrets</span>...</span></pre>
+<div style="position:absolute; bottom:2%; right:50%; transform:translateX(50%)">
 <pre>here's Skysupercharged all across some small portions of the internet:</pre>
 <center>
 <button class="selfb" onclick="document.location='https://skysupercharged.tumblr.com/'"><img src="tumblr.png"/></button>
 <button class="selfb" onclick="document.location='https://www.youtube.com/@Skysupercharged'"><img src="youtube.png"/></button>
 <button class="selfb" onclick="document.location='https://soundcloud.com/skysupercharged'"><img src="soundcloud.png"/></button>
+<button class="selfb" onclick="document.location='https://backloggery.com/skysupercharged'"><img src="backloggery.png"/></button>
 </center>
+</div>
 </body>
 
+<script src="/skysiteresources/javascript/inspectwarn.js"></script>
+
+<script src="/skysiteresources/javascript/homepageS.js"></script>
+<script src="/skysiteresources/javascript/associatedsites.js"></script>
+
 <script>
-			function skylanders() {
-				document.location = 'steam://launch/WUP-P-BK7E'
-				setTimeout(() => { alert('Steam app ID "WUP-P-BK7E" could not be found.') }, 10000);
-			} 
+	function skylanders() {
+		document.location = 'steam://launch/WUP-P-BK7E'
+		setTimeout(() => { alert('Steam app ID "WUP-P-BK7E" could not be found.') }, 1000);
+	} 
 </script>
 
 </html>
