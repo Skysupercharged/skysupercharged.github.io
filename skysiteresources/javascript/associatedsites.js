@@ -47,10 +47,10 @@ let sites = {
 		image: "static.gif",
 		link: "https://garden.lgbt"
 	},
-	//'gumi': {
-	//	image: "https://gumi.gay/logo.gif",
-	//	link: "https://gumi.gay"
-	//},
+	'gumi': {
+		image: "https://gumi.gay/logo.gif",
+		link: "https://gumi.gay"
+	},
 	'flower': {
 		image: "static.gif",
 		link: "https://flower1221.neocities.org"
