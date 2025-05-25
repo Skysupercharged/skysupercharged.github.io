@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us" style="width: 100%">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Door</title>
+<link rel="icon" href="/skysiteresources/1.png">
+<link rel="stylesheet" href="/skysiteresources/skam.css">
+</head>
+
+<body>
+
+<pre id="countdown" style="z-index: 1; user-select: none; pointer-events: none; font-size: 200%; position: fixed; top: 25%; left: 50%; transform: translate(-50%, -50%);">CODE_UNRESPONSIVE</pre>
+<img id="door" style="cursor: pointer; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" onclick="doorknock()" src="door_closed.png"></img>
+
+<script>
+var knocks = 0
+var knock = new Audio('snd_singleknock.mp3'); knock.volume = 0.3;
+var open = new Audio('snd_impact.mp3'); open.volume = 0.3;
+var t
+
+function doorknock(){
+//	if (knocks < 110) {
+		knocks += 1
+		clearInterval(t);
+		t = setInterval(() => {document.title = "Door"}, 2500);
+		if(knocks > 109){
+			document.title = "* It's not ready yet."
+			knock.pause();
+			knock.currentTime = 0;
+			knock.play();
+		//	document.title = "* It got darker."
+		//	clearInterval(x);
+		//	document.getElementById("countdown").innerHTML = "19:21:18:22:05:25"
+		//	document.getElementById("door").src = "door_open.png"
+		//	open.play();
+		//	setTimeout(() => {document.location = "secret/"}, 250);
+		} else {
+			document.title = "* It's locked."
+			knock.pause();
+			knock.currentTime = 0;
+			knock.play();
+		}
+//	}
+}
+
+//thank you for the countdown code w3schools dot com
+
+// Set the date we're counting down to
+var countDownDate = new Date("2025-06-05T00:00:00+09:00").getTime();
+
+// Update the count down every 1 second
+x = setInterval(()=>{countdown()}, 1000)
+
+function digit(numb){
+	if(numb < 10){
+		numb = "0" + numb;
+	}
+	return numb
+}
+
+function countdown() {
+
+	// Get today's date and time
+	var now = new Date().getTime();
+
+	// Find the distance between now and the count down date
+	var distance = countDownDate - now;
+
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	
+	if (distance < 0) {
+		clearInterval(x);
+		document.title = "On the verge of connection"
+		document.getElementById("countdown").innerHTML = "THANK_YOU_FOR_WAITING\n\nTHE_TIME_IS_ALMOST_HERE\n\nI_WILL_CONTACT_YOU_SOON\n\n\n"
+		document.getElementById("countdown").style.top = "50%"
+		document.getElementById("door").src = "door_open.png"
+		document.getElementById("door").style.userSelect = "none"
+		document.getElementById("door").style.pointerEvents = "none"
+		//document.getElementById("countdown").innerHTML = digit(Math.abs(days)) + ":" + digit(Math.abs(hours)) + ":" + digit(Math.abs(minutes)) + ":" + digit(Math.abs(seconds));
+	} else {
+		document.getElementById("countdown").innerHTML = digit(Math.abs(days)) + ":" + digit(Math.abs(hours)) + ":" + digit(Math.abs(minutes)) + ":" + digit(Math.abs(seconds));
+	}
+}
+countdown()
+</script>
+
+</body>
