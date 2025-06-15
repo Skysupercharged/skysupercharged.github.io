@@ -25,7 +25,8 @@ function doorknock(){
 		clearInterval(t);
 		t = setInterval(() => {document.title = "Door"}, 2500);
 		if(knocks > 109){
-			document.title = "* It's not ready yet."
+		//	document.title = "* It's not ready yet."
+			document.title = "* It's locked."
 			knock.pause();
 			knock.currentTime = 0;
 			knock.play();
@@ -75,14 +76,14 @@ function countdown() {
 
 	
 	if (distance < 0) {
-		clearInterval(x);
-		document.title = "On the verge of connection"
-		document.getElementById("countdown").innerHTML = "THANK_YOU_FOR_WAITING\n\nTHE_TIME_IS_ALMOST_HERE\n\nI_WILL_CONTACT_YOU_SOON\n\n\n"
-		document.getElementById("countdown").style.top = "50%"
-		document.getElementById("door").src = "door_open.png"
-		document.getElementById("door").style.userSelect = "none"
-		document.getElementById("door").style.pointerEvents = "none"
-		//document.getElementById("countdown").innerHTML = digit(Math.abs(days)) + ":" + digit(Math.abs(hours)) + ":" + digit(Math.abs(minutes)) + ":" + digit(Math.abs(seconds));
+		//clearInterval(x);
+		//document.title = "On the verge of connection"
+		//document.getElementById("countdown").innerHTML = "THANK_YOU_FOR_WAITING\n\nTHE_TIME_IS_ALMOST_HERE\n\nI_WILL_CONTACT_YOU_SOON\n\n\n"
+		//document.getElementById("countdown").style.top = "50%"
+		//document.getElementById("door").src = "door_open.png"
+		//document.getElementById("door").style.userSelect = "none"
+		//document.getElementById("door").style.pointerEvents = "none"
+		document.getElementById("countdown").innerHTML = "-" + digit(Math.abs(days)) + ":" + digit(Math.abs(hours)) + ":" + digit(Math.abs(minutes)) + ":" + digit(Math.abs(seconds));
 	} else {
 		document.getElementById("countdown").innerHTML = digit(Math.abs(days)) + ":" + digit(Math.abs(hours)) + ":" + digit(Math.abs(minutes)) + ":" + digit(Math.abs(seconds));
 	}
