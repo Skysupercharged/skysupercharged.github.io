@@ -11,16 +11,19 @@ let sites = {
 		image: "https://silvershorthair.github.io/Assets/Silvbutton2.png",
 		link: "https://silvershorthair.github.io"
 	},
-	'derred': {
-		image: "https://hiyajemma.github.io/images/webring/derredbutton.png",
-		link: "https://hiyajemma.github.io"
+	'jemma': {
+		image: "https://jemmathecube.github.io/website/images/webring/derredbutton.png",
+		link: "https://jemmathecube.github.io/website"
 	},
 	'mia': {
 		image: "random",
-		num: "3",
+		num: "6",
 		ran1: "https://miastonished.github.io/assets/buttons/button.gif",
 		ran2: "https://miastonished.github.io/assets/buttons/button2.png",
 		ran3: "https://miastonished.github.io/assets/buttons/button3.gif",
+		ran4: "https://miastonished.github.io/assets/buttons/button4.png",
+		ran5: "https://miastonished.github.io/assets/buttons/button5.png",
+		ran6: "https://miastonished.github.io/assets/buttons/button6.png",
 		link: "https://miastonished.github.io"
 	},
 	'xzan': {
